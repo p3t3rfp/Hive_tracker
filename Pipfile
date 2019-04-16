@@ -16,3 +16,5 @@ django-heroku = "*"
 
 [requires]
 python_version = "3.7"
+
+# updated django version to 2.2
