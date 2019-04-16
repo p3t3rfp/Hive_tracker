@@ -1,0 +1,1 @@
+web: gunicorn hive_project.wsgi --log-file -
