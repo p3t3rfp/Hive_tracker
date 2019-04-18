@@ -20,7 +20,7 @@ class Hive(models.Model):
     keeper = models.ForeignKey(Keeper, on_delete=models.CASCADE, related_name='hives')
 
     def __str__(self):
-        return self.installed_date
+        return self.image
 
 
 class Bee(models.Model):
