@@ -11,7 +11,7 @@ class Keeper(models.Model):
 
 
 class Hive(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, default='Hive Name')
     installed_date = models.DateField()
     number_of_frames = models.IntegerField()
     annual_production = models.IntegerField()
