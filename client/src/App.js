@@ -18,7 +18,7 @@ class App extends Component {
 
           <Switch>
             <Route exact path='/' component={KeeperList}/>
-            <Route exact path='/keeper/:id' component={Keeper}/>
+            <Route exact path='/keepers/:id/' component={Keeper}/>
           </Switch>
         </div>
       </Router>

@@ -11,6 +11,7 @@ class Keeper(models.Model):
 
 
 class Hive(models.Model):
+    name = models.CharField(max_length=100)
     installed_date = models.DateField()
     number_of_frames = models.IntegerField()
     annual_production = models.IntegerField()
@@ -20,7 +21,7 @@ class Hive(models.Model):
     keeper = models.ForeignKey(Keeper, on_delete=models.CASCADE, related_name='hives')
 
     def __str__(self):
-        return self.image
+        return self.name
 
 
 class Bee(models.Model):

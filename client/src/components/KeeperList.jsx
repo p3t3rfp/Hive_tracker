@@ -13,7 +13,7 @@ class KeeperList extends Component {
 
     getAllKeepers = async () => {
         try {
-            const res = await axios.get('/api/v1/keepers')
+            const res = await axios.get('/api/v1/keepers/')
             this.setState({ keepers: res.data })
         }
         catch (err) {
@@ -28,7 +28,7 @@ class KeeperList extends Component {
         {
             this.state.keepers.map(keeper => (
                 <div key={keeper.id}>
-                    <Link to={`/keeper/${keeper.id}`} >{keeper.name}</ Link>
+                    <Link to={`/keepers/${keeper.id}`} >{keeper.name}</ Link>
                     <div>{keeper.location}</div>
                 </div>
             ))

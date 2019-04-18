@@ -12,7 +12,7 @@ class HiveSerializer(serializers.ModelSerializer):
     bees = BeeSerializer(many=True, read_only=True)
     class Meta:
         model = Hive
-        fields = ('id', 'installed_date', 'number_of_frames', 'annual_production', 'last_harvested', 'number_of_bees', 'image', 'keeper')
+        fields = ('id', 'installed_date', 'number_of_frames', 'annual_production', 'last_harvested', 'number_of_bees', 'image', 'keeper', 'bees')
 
 class KeeperSerializer(serializers.ModelSerializer):
     hives = HiveSerializer(many=True, read_only=True)
