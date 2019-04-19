@@ -1,11 +1,26 @@
+#root {
+  background-image: linear-gradient(rgba(0, 0 , 0,  0.5), rgba(0, 0, 0, 0.5)), url("./images/bg_image.jpg");
+  background-size: 100vw 100vh;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
 body {
   margin: 0;
   padding: 0;
+  color: white;
+  text-shadow: 2px 2px 8px #000000;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: white;
 }
 
 code {
