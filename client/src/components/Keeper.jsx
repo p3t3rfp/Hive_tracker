@@ -87,11 +87,6 @@ class Keeper extends Component {
     state = {
         keeper: {},
         hives: [],
-        bees: [],
-        newBee: {
-            species: '',
-            image: '',
-        },
         newHive:{
             name: '',
             installed_date: '',

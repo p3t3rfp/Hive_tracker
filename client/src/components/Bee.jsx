@@ -138,7 +138,7 @@ class Bee extends Component {
         }
         return (
             <Wrapper>
-                <Link to={`/keepers/${this.props.match.params.id}/hives/`}>Go Back</Link>
+                <Link to={`/keepers/${this.props.match.params.id}/hives/${this.props.match.params.hiveId}`}>Go Back</Link>
                 <FlexContainerCentered>
                     <Form onSubmit={this.createBees}>
                         <div>
