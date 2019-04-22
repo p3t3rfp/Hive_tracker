@@ -28,8 +28,7 @@ const FlexRowCentered = styled(FlexContainerCentered)`
 const Card = styled.div`
     display: flex;
     flex-direction: column;
-    /* background-color: lightgoldenrodyellow; */
-    opacity: .9;
+    opacity: .8;
     align-items: center;
     text-align: center;
     padding: 20px;
