@@ -154,6 +154,7 @@ class KeeperList extends Component {
                                 type="text"
                                 name="location"
                                 onChange={this.handleChange}
+                                placeholder='City'
                                 value={this.state.newKeeper.location}
                             />
                         </div>

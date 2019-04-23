@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import axios from 'axios';
 import styled from 'styled-components';
+const WEATHER_KEY = process.env.REACT_APP_KEY
 
 const Wrapper = styled.div`
     width: 80%;
@@ -100,11 +101,13 @@ class Keeper extends Component {
         isKeeperFormDisplayed: false,
         isHiveFormDisplayed: false,
         redirectToHome: false,
+        currentWeather: '',
     }
 
     componentDidMount() {
         const keeperId = this.props.match.params.id
         this.getKeeper(keeperId)
+        this.getWeatherData()
     }
 
     getKeeper = async (keeperId) => {
@@ -114,6 +117,7 @@ class Keeper extends Component {
                 keeper: res.data,
                 hives: res.data.hives
             })
+            console.log(this.state.keeper.location)
         }
         catch (err) {
             console.log(err)
@@ -186,13 +190,12 @@ class Keeper extends Component {
         }
     }
 
-    // getWeatherData = () => {
-    //     axios.get(`http://api.openweathermap.org/data/2.5/weather?zip=${this.state.currentZip.currentZip},us&units=imperial&appid=${WEATHER_KEY}`).then(res => {
-    //       this.setState({ currentWeather: res.data })
-    //     }).then(res => {
-    //       this.setState({ displayWeatherData: !this.state.displayWeatherData })
-    //     })
-    //   }
+    getWeatherData = () => {
+        axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${this.state.keeper.location},us&units=imperial&APPID=${WEATHER_KEY}`).then(res => {
+            console.log(res.data.list[0].main.temp_min)
+          this.setState({ currentWeather: res.data.list[0].main.temp_min })
+        })
+      }
 
     render() {
             if (this.state.redirectToHome === true) {
@@ -202,6 +205,7 @@ class Keeper extends Component {
             <Wrapper>
                 <h1>{this.state.keeper.name}</h1>
                 <h3>{this.state.keeper.location}</h3>
+                <h3>Current Temperature: {this.state.currentWeather} F°</h3>
                 <button onClick={this.toggleKeeperForm}>Update this Keeper</button>
                 <button onClick={this.deleteKeeper}>Remove Keeper</button>
                 <button onClick={this.toggleHiveForm}>Add a new Hive</button>
