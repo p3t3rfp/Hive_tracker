@@ -186,6 +186,14 @@ class Keeper extends Component {
         }
     }
 
+    // getWeatherData = () => {
+    //     axios.get(`http://api.openweathermap.org/data/2.5/weather?zip=${this.state.currentZip.currentZip},us&units=imperial&appid=${WEATHER_KEY}`).then(res => {
+    //       this.setState({ currentWeather: res.data })
+    //     }).then(res => {
+    //       this.setState({ displayWeatherData: !this.state.displayWeatherData })
+    //     })
+    //   }
+
     render() {
             if (this.state.redirectToHome === true) {
                 return <Redirect to="/" />
