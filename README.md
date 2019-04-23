@@ -20,13 +20,13 @@ Hive-tracker is an application for apiarists that want to catalog their hives an
 
 <img src='client/src/images/Hive-tracker ERD.jpeg' />
 
-<img src='/Users/peterfitzpatrick/Desktop/hive_tracker/client/src/images/Index.png'>
+<img src='client/src/images/Index.png'>
 
-<img src='/Users/peterfitzpatrick/Desktop/hive_tracker/client/src/images/KeeperDetail.png'>
+<img src='client/src/images/KeeperDetail.png'>
 
-<img src='/Users/peterfitzpatrick/Desktop/hive_tracker/client/src/images/HiveDetail.png'>
+<img src='client/src/images/HiveDetail.png'>
 
-<img src='/Users/peterfitzpatrick/Desktop/hive_tracker/client/src/images/BeeDetail.png'>
+<img src='client/src/images/BeeDetail.png'>
 
 # Technologies utilized
 
